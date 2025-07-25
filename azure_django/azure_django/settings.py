@@ -188,8 +188,6 @@ CSRF_TRUSTED_ORIGINS = [
 
 STATIC_URL = 'static/'
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
 # Were django collects all the static files 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'frontend/static')
@@ -197,6 +195,11 @@ STATICFILES_DIRS = [
 
 # were django stores all the static files once collect it from STATICFILES_DIRS
 STATIC_ROOT = os.path.join(BASE_DIR,'static')
+
+# Compress the static files taken from STATIC_ROOT to faster page loads
+# and after In production it will load static files from Whitenoise middleware
+# for better Performance
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field

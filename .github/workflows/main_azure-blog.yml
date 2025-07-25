@@ -26,11 +26,20 @@ jobs:
 
       - name: Create and start virtual environment
         run: |
+          cd azure_django
           python -m venv venv
           source venv/bin/activate
       
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: |
+          python -m pip install --upgrade pip
+          cd azure_django
+          pip install -r requirements.txt
+
+      - name: Collect static files
+        run: |
+          cd azure_django
+          python manage.py collectstatic --noinput
         
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 
