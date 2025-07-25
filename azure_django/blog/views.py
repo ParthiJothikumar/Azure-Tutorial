@@ -11,7 +11,7 @@ from django.utils.decorators import method_decorator
 from django.views.decorators.csrf import csrf_protect, ensure_csrf_cookie
 from django.contrib.auth.models import User
 
-# This class we can use as an inheritance to other class
+# This class we can use as an inheritance to other classs
 # To protect the class views from access by anyone   
 class ClassCSRFMixin:
 
