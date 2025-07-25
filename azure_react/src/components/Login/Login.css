@@ -1,0 +1,43 @@
+.login-details {
+    display: flex;
+    align-items: baseline;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.login-header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.login-input-1,
+.login-input-2 {
+    padding: 15px 0px;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+}
+
+.login-header-1 {
+    font-size: 30px;
+    padding-bottom: 10px;
+    font-weight: 600;
+}
+
+.login-header-2 {
+    font-size: 20px;
+}
+
+.login-footer {
+    padding-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.login-footer-1 {}
+
+.login-footer-2 {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}

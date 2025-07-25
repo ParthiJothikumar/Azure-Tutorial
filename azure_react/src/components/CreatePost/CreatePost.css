@@ -1,0 +1,17 @@
+.post-title,
+.post-content {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0px;
+    gap: 10px;
+}
+
+.post-input {
+    width: 20vw;
+    height: 5vh;
+}
+
+.post-textarea {
+    width: 50vw;
+    height: 20vh;
+}
