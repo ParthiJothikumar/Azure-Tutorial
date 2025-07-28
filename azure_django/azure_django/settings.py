@@ -28,14 +28,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-$gn9522wpyjrf)5y^!jc%c31onc8^i@-8^6d7*1iv@wqx+9u1k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 # If we want to run our Django Application on any host we need to us "*"
 # When we deploy our application to different host it will not throw any error 
 # example Host --> Hostinger, Bluehost, GoDaddy
 ALLOWED_HOSTS = [
-    "http://localhost:5173",
-    "https://azure-blog-fbhzgrchh3anareg.canadacentral-01.azurewebsites.net",
+    "127.0.0.1",
+    "localhost",
 ]
 
 REST_FRAMEWORK = {
@@ -71,7 +71,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'azure_django.urls'
@@ -153,7 +152,6 @@ USE_TZ = True
 # So we need to add in CORS_ALLOWED_ORIGINS
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",  # Vite dev server
-    "https://azure-blog-fbhzgrchh3anareg.canadacentral-01.azurewebsites.net",
 ]
 
 # It will allow all origins to access the API Endpoint
@@ -183,7 +181,6 @@ CSRF_COOKIE_SECURE = True
 # only if they play by the rules (like sending the CSRF token).”
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:5173",
-    "https://azure-blog-fbhzgrchh3anareg.canadacentral-01.azurewebsites.net",
 ]
 
 
@@ -204,7 +201,7 @@ STATIC_ROOT = os.path.join(BASE_DIR,'static')
 # Compress the static files taken from STATIC_ROOT to faster page loads
 # and after In production it will load static files from Whitenoise middleware
 # for better Performance
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
