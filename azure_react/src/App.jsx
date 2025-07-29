@@ -19,6 +19,8 @@ function App() {
 
   useEffect(() => {
     try {
+      console.log(import.meta.env.VITE_API_URL);
+      
       const fetchCsrfToken = async () => {
         // The withCredentials: true option instructs the browser to send cookies and 
         // authentication headers along with the request — even for cross-origin requests.

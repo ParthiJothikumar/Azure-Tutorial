@@ -15,6 +15,8 @@ CSRF_TRUSTED_ORIGINS = [
 #CORS_ALLOWED_ORIGINS = [
 #]
 
+SECRET_KEY = os.environ['MY_SECRET_KEY']
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
