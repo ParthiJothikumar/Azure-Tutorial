@@ -192,7 +192,7 @@ STATIC_URL = 'static/'
 
 # Were django collects all the static files 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR,'frontend/static')
+    os.path.join(BASE_DIR,'frontend/static')    
 ]
 
 # were django stores all the static files once collect it from STATICFILES_DIRS
