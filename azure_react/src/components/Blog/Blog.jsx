@@ -20,7 +20,7 @@ const Blog = () => {
         }
         try {
             const fetchBlogData = async () => {
-                await axios.get(`${import.meta.env.VITE_API_URL}/blog`, body)
+                await axios.get(`${import.meta.env.VITE_API_URL}/blog/`, body)
                     .then(response => {
                         dispatch(fetchBlogSucess(response.data))
                     })
@@ -68,7 +68,7 @@ const Blog = () => {
             }
             try {
                 const deletePostData = async () => {
-                    await axios.post(`${import.meta.env.VITE_API_URL}/delete`, data, body)
+                    await axios.post(`${import.meta.env.VITE_API_URL}/delete/`, data, body)
                         .then(response => {
                             window.location.reload()
                         })

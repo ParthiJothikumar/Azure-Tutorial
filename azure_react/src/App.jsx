@@ -24,7 +24,7 @@ function App() {
       const fetchCsrfToken = async () => {
         // The withCredentials: true option instructs the browser to send cookies and 
         // authentication headers along with the request — even for cross-origin requests.
-        await axios.get(`${import.meta.env.VITE_API_URL}/api/csrf`, { withCredentials: true })
+        await axios.get(`${import.meta.env.VITE_API_URL}/api/csrf/`, { withCredentials: true })
           .then(response => {
             if (response.data && response.data.success == "cookie set") {
               dispatch(fetchTokenSucess(getCSRFToken()))

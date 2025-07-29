@@ -25,7 +25,7 @@ const Register = () => {
             },
             withCredentials: true
         }
-        await axios.post(`${import.meta.env.VITE_API_URL}/register`, data, body)
+        await axios.post(`${import.meta.env.VITE_API_URL}/register/`, data, body)
             .then(response => {
                 navigate('/login')
             })

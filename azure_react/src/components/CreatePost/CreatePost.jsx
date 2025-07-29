@@ -24,7 +24,7 @@ const CreatePost = () => {
             },
             withCredentials: true
         }
-        await axios.post(`${import.meta.env.VITE_API_URL}/create`, data, body)
+        await axios.post(`${import.meta.env.VITE_API_URL}/create/`, data, body)
             .then(response => {
                 navigate('/')
             })

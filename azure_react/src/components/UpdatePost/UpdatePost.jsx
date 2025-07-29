@@ -26,7 +26,7 @@ const UpdatePost = () => {
             },
             withCredentials: true
         }
-        await axios.post(`${import.meta.env.VITE_API_URL}/update`, data, body)
+        await axios.post(`${import.meta.env.VITE_API_URL}/update/`, data, body)
             .then(response => {
                 navigate('/')
             })

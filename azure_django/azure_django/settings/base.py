@@ -188,15 +188,15 @@ CSRF_TRUSTED_ORIGINS = [
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
 # Were django collects all the static files 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR,'frontend/static')    
+   
 ]
 
 # were django stores all the static files once collect it from STATICFILES_DIRS
-STATIC_ROOT = os.path.join(BASE_DIR,'static')
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 
 # Compress the static files taken from STATIC_ROOT to faster page loads
 # and after In production it will load static files from Whitenoise middleware

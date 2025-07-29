@@ -43,7 +43,7 @@ const Navbar = (props) => {
           'X-CSRFToken': token
         }
       }
-      await axios.post(`${import.meta.env.VITE_API_URL}/logout`, {}, body)
+      await axios.post(`${import.meta.env.VITE_API_URL}/logout/`, {}, body)
         .then(res => {
           dispatch(fetchLogoutSucess())
           dispatch(fetchBlogSucess([]))

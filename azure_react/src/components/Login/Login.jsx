@@ -25,7 +25,7 @@ const Login = () => {
             },
             withCredentials: true
         }
-        await axios.post(`${import.meta.env.VITE_API_URL}/login`, data, body)
+        await axios.post(`${import.meta.env.VITE_API_URL}/login/`, data, body)
             .then(response => {
                 dispatch(fetchUserSucess(response.data))
                 navigate('/')
