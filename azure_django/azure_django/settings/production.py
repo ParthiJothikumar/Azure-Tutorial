@@ -11,11 +11,11 @@ DEBUG = False
 
 
 ALLOWED_HOSTS = [
-    os.environ['WEBSITE_HOSTNAME'], 
+    os.environ.get('WEBSITE_HOSTNAME', 'localhost'), 
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://'+os.environ['WEBSITE_HOSTNAME'],
+    'https://'+os.environ.get('WEBSITE_HOSTNAME', 'localhost'),
 ]
 
 CORS_ALLOWED_ORIGINS = [
