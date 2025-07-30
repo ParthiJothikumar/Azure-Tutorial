@@ -2,7 +2,7 @@ import os
 from .base import *
 from .base import BASE_DIR
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     os.environ['WEBSITE_HOSTNAME'], 
