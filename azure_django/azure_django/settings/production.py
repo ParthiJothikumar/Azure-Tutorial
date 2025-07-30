@@ -1,8 +1,14 @@
 import os
+import sys
 from .base import *
 from .base import BASE_DIR
 
+print("⚠️ USING PRODUCTION SETTINGS")
+print("Loaded from:", __file__, file=sys.stderr)
+
 DEBUG = True
+
+
 
 ALLOWED_HOSTS = [
     os.environ['WEBSITE_HOSTNAME'], 
