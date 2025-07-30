@@ -1,10 +1,9 @@
 from django.contrib import admin
 from django.urls import path, include
 import blog.views as views
-from django.http import HttpResponse
 
 urlpatterns = [
-    path('blog/', lambda request: HttpResponse("Static response ✅")),
+    path('blog/',views.BlogPost.as_view(), name="blog"),
     path('create/',views.CreatePost.as_view(), name="create"),
     path('update/',views.UpdatePost.as_view(), name="update"),
     path('delete/',views.DeletePost.as_view(), name="delete"),

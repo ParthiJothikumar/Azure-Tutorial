@@ -10,7 +10,6 @@ from django.contrib.auth import authenticate, login, logout
 from django.utils.decorators import method_decorator
 from django.views.decorators.csrf import csrf_protect, ensure_csrf_cookie
 from django.contrib.auth.models import User
-from django.http import HttpResponse
 
 # This class we can use as an inheritance to other class
 # To protect the class views from access by anyone   
@@ -90,9 +89,19 @@ class LogoutView(ClassCSRFMixin, APIView):
         return Response({'sucess':"Logged out"})
 
 class BlogPost(APIView):
+    permission_classes = [IsAuthenticated]
 
     def get(self,request):
-         return Response("BlogPost view reached ✅")
+        user = request.user
+        model_data = Post.objects.filter(user = user)
+        # Many=true because the model instance going to return a list of objects
+        # If we are sending only a single object to serializer, then many=True not required
+        serialize_data = PostSerializer(model_data,many=True).data
+        blog_df = pd.DataFrame(serialize_data,)
+        #Orient = records is to show data in row like structure
+        result = blog_df.to_dict(orient="records")
+
+        return Response(result,status=status.HTTP_200_OK)
     
 class CreatePost(APIView):
     permission_classes = [IsAuthenticated]
