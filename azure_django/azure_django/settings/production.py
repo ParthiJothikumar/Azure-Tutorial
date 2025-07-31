@@ -11,7 +11,7 @@ DEBUG = False
 
 
 ALLOWED_HOSTS = [
-    'white-glacier-048b80e0f.1.azurestaticapps.net', 
+    'azure-blog-fbhzgrchh3anareg.canadacentral-01.azurewebsites.net', 
 ]
 
 CSRF_TRUSTED_ORIGINS = [
