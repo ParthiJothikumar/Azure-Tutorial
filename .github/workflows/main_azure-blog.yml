@@ -77,4 +77,5 @@ jobs:
         with:
           app-name: 'azure-blog'
           slot-name: 'Production'
+          package: './azure_django'
           
