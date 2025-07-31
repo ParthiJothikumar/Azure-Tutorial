@@ -11,11 +11,11 @@ DEBUG = False
 
 
 ALLOWED_HOSTS = [
-    'azure-blog-fbhzgrchh3anareg.canadacentral-01.azurewebsites.net', 
+    'white-glacier-048b80e0f.1.azurestaticapps.net', 
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://azure-blog-fbhzgrchh3anareg.canadacentral-01.azurewebsites.net',
+    'https://white-glacier-048b80e0f.1.azurestaticapps.net',
 ]
 
 CORS_ALLOWED_ORIGINS = [
