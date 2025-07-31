@@ -2,7 +2,7 @@ import os
 from .base import *
 from .base import BASE_DIR
 
-print("⚠️ USING PRODUCTION SETTINGS")
+print("⚠️  hi")
 
 DEBUG = False
 
@@ -13,7 +13,7 @@ ALLOWED_HOSTS = [
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://'+'azure-blog-fbhzgrchh3anareg.canadacentral-01.azurewebsites.net',
+    'https://azure-blog-fbhzgrchh3anareg.canadacentral-01.azurewebsites.net',
 ]
 
 CORS_ALLOWED_ORIGINS = [
