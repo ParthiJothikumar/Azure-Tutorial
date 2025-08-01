@@ -9,10 +9,20 @@ logging.warning("✅ Using PRODUCTION settings file.")
 DEBUG = False
 
 
-
+# Here we need to use Backend Endpoint
 ALLOWED_HOSTS = [
     'azure-blog-fbhzgrchh3anareg.canadacentral-01.azurewebsites.net', 
 ]
+
+#CORS is about allowing your frontend (origin) to access your backend API across domains.
+
+#CSRF protection in Django needs to know which frontend origins are safe when sending cookies & CSRF tokens.
+
+#So in both cases, you are telling Django:
+
+#“I trust this frontend origin (azurestaticapps.net) to talk to me and receive/send CSRF-protected requests.”
+
+#So we need to use Front End origin
 
 CSRF_TRUSTED_ORIGINS = [
     'https://white-glacier-048b80e0f.1.azurestaticapps.net',

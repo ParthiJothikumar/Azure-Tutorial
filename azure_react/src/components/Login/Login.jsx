@@ -25,6 +25,8 @@ const Login = () => {
             },
             withCredentials: true
         }
+        console.log(body);
+        
         await axios.post(`${import.meta.env.VITE_API_URL}/login/`, data, body)
             .then(response => {
                 dispatch(fetchUserSucess(response.data))
