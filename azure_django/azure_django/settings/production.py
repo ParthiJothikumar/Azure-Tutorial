@@ -32,6 +32,8 @@ CORS_ALLOWED_ORIGINS = [
     'https://white-glacier-048b80e0f.1.azurestaticapps.net'
 ]
 
+CSRF_COOKIE_DOMAIN = 'https://white-glacier-048b80e0f.1.azurestaticapps.net'
+
 SECRET_KEY = 'NqP7ZdC2fWy3LmRHvT5KxAoUFgbJ91XE'
 
 STORAGES = {

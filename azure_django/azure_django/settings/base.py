@@ -171,6 +171,7 @@ SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SAMESITE = 'None'
 CSRF_COOKIE_SECURE = True
 
+
 # There are two ways we can use the CSRF_TRUSTED_ORIGINS
 # If we are using both different endpoints in Front End and Back end
 # 1) When BE needs to send an CSRF token to FE and set that cookie in the frontend domain
