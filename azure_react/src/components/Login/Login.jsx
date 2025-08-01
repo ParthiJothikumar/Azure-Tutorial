@@ -20,14 +20,20 @@ const Login = () => {
         }
         const body = {
             headers: {
-                "Content-Type": "application/json",
+                'Content-Type': 'application/json',
                 'X-CSRFToken': token
             },
             withCredentials: true
         }
         console.log(body);
-        
-        await axios.post(`${import.meta.env.VITE_API_URL}/login/`, data, body)
+
+        await axios.post(`${import.meta.env.VITE_API_URL}/login/`, data, {
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': token
+            },
+            withCredentials: true
+        })
             .then(response => {
                 dispatch(fetchUserSucess(response.data))
                 navigate('/')
