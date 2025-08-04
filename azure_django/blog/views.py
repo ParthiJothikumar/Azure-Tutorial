@@ -66,7 +66,7 @@ class LoginForm(ClassCSRFMixin, APIView):
         user = authenticate(request, username=username, password=password)
 
         if user is not None:
-            #Then if user present, it will login the user
+            #Then if user present, it will login the user and create a session
             login(request, user)
             return Response({"Success":"Logged in succesfully","data":user.username},status=status.HTTP_200_OK)
         else:

@@ -144,6 +144,7 @@ USE_I18N = True
 
 USE_TZ = True
 
+
 # If we are using both different endpoints in Front End and Back end
 # Like in FE -> localhost:5173, and in Backend -> 127.0.0.0.1
 # Then Api will throw CORS(Cors origin) error when we access from FE

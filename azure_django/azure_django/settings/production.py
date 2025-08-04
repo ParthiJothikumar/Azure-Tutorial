@@ -14,6 +14,10 @@ ALLOWED_HOSTS = [
     'azure-blog-fbhzgrchh3anareg.canadacentral-01.azurewebsites.net', 
 ]
 
+SESSION_COOKIE_DOMAIN = "white-glacier-048b80e0f.1.azurestaticapps.net"
+
+CSRF_COOKIE_DOMAIN = "white-glacier-048b80e0f.1.azurestaticapps.net"
+
 #CORS is about allowing your frontend (origin) to access your backend API across domains.
 
 #CSRF protection in Django needs to know which frontend origins are safe when sending cookies & CSRF tokens.
