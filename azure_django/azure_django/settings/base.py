@@ -32,7 +32,8 @@ DEBUG = True
 
 # If we want to run our Django Application on any host we need to us "*"
 # When we deploy our application to different host it will not throw any error 
-# example Host --> Hostinger, Bluehost, GoDaddy
+# But when we go to production, we need to use only a specific domain host 
+# That domain host should be a backend endpoint not a frontend endpoint
 ALLOWED_HOSTS = [
     "127.0.0.1",
     "localhost",
@@ -145,6 +146,7 @@ USE_I18N = True
 USE_TZ = True
 
 
+
 # If we are using both different endpoints in Front End and Back end
 # Like in FE -> localhost:5173, and in Backend -> 127.0.0.0.1
 # Then Api will throw CORS(Cors origin) error when we access from FE
@@ -171,6 +173,8 @@ SESSION_COOKIE_SAMESITE = 'None'
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SAMESITE = 'None'
 CSRF_COOKIE_SECURE = True
+
+
 
 
 # There are two ways we can use the CSRF_TRUSTED_ORIGINS

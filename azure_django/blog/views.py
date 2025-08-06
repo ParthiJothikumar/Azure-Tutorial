@@ -10,6 +10,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.utils.decorators import method_decorator
 from django.views.decorators.csrf import csrf_protect, ensure_csrf_cookie
 from django.contrib.auth.models import User
+from django.middleware.csrf import get_token
 
 # This class we can use as an inheritance to other class
 # To protect the class views from access by anyone   
@@ -24,7 +25,8 @@ class GetCSRToken(APIView):
 
     @method_decorator(ensure_csrf_cookie)
     def get(self, request):
-        return Response({"success":"cookie set"})
+        token = get_token(request)
+        return Response({"success":token})
     
 class RegisterForm(ClassCSRFMixin, APIView):
     permission_classes = [AllowAny]

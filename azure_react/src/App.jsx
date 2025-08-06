@@ -26,8 +26,8 @@ function App() {
         // authentication headers along with the request — even for cross-origin requests.
         await axios.get(`${import.meta.env.VITE_API_URL}/api/csrf/`, { withCredentials: true })
           .then(response => {
-            if (response.data && response.data.success == "cookie set") {
-              dispatch(fetchTokenSucess(getCSRFToken()))
+            if (response.data && response.data.success) {
+              dispatch(fetchTokenSucess(response.data.success))
             }
             else {
               dispatch(fetchTokenFailed("Something went wrong"))
